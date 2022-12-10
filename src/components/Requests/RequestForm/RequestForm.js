@@ -9,7 +9,7 @@ const RequestForm = ({
 }) => {
   const [day, month, year] = data.dob.split("-");
   return (
-    <div className="flex flex-col absolute top-[164px] right-[24px] bg-white1 z-10 w-[650px] border border-[rgba(0, 0, 0, 0.1)] shadow-shadow4">
+    <div className="flex flex-col absolute top-[164px] right-[24px] bottom-[10px] bg-white1 z-10 w-[650px] border border-[rgba(0, 0, 0, 0.1)] shadow-shadow4">
       <div className="flex items-center sticky top-0 justify-between bg-white1 py-[15px] pl-[42px]">
         <span className="font-poppins font-normal text-[16px] leading-[24px] opacity-70 text-black">
           New Update Form
