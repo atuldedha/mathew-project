@@ -8,7 +8,7 @@ function App() {
   const [selected, setSelected] = useState(1);
   const [showSidebar, setShowSidebar] = useState(true);
   return (
-    <div className="flex w-full bg-green2 h-screen overflow-scroll">
+    <div className="flex w-full bg-green2 h-screen overflow-hidden">
       <Sidebar
         showSidebar={showSidebar}
         setShowSidebar={setShowSidebar}
