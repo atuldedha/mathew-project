@@ -1,7 +1,6 @@
 import React from "react";
 
-const Profile = ({ data, showDemographicData }) => {
-  const [day, month, year] = data.dob.split("-");
+const Profile = ({ data, showDemographicData, date }) => {
   return (
     <>
       <div className="flex items-center space-x-8">
@@ -26,7 +25,7 @@ const Profile = ({ data, showDemographicData }) => {
               Date of birth
             </span>
             <span className="font-poppins font-semibold text-[18px] leading-[27px] text-black">
-              {`${new Date(+year, +month - 1, +day).toDateString()}`}
+              {date}
             </span>
           </div>
           <div className="flex flex-col space-y-1">

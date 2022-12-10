@@ -21,7 +21,7 @@ const EmployerApplicantForm = ({ data, closeForm }) => {
       </div>
 
       <div className="ml-[35px] mb-20">
-        <Profile name={data.name} email={data.email} image={data.image} />
+        <Profile data={data} />
       </div>
 
       <div className="flex flex-col shadow-shadow5 border border-gray2 bg-white1 pt-[25px] pb-[13px]">

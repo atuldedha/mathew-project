@@ -8,6 +8,8 @@ const RequestForm = ({
   deleteRequest,
   verifyRequest,
 }) => {
+  const [day, month, year] = data.dob.split("-");
+  const date = new Date(+year, +month - 1, +day).toDateString();
   return (
     <div className="flex flex-col absolute top-[164px] right-[24px] bottom-[10px] bg-white1 z-10 w-[650px] border border-[rgba(0, 0, 0, 0.1)] shadow-shadow4">
       <div className="flex items-center sticky top-0 justify-between bg-white1 py-[15px] pl-[42px]">
@@ -34,7 +36,12 @@ const RequestForm = ({
             fromEmplyer ? "bg-green4" : ""
           } flex flex-col py-[25px] pl-[42px] pr-[20px]"`}
         >
-          <Profile data={data} showDemographicData />
+          <Profile
+            data={data}
+            image={data.image}
+            showDemographicData
+            date={date}
+          />
         </div>
 
         <div className="flex flex-col space-y-4 mt-4 mb-28 pl-[40px]">
