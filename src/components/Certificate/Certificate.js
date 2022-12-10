@@ -1,9 +1,7 @@
 import React from "react";
 import Verified from "../../images/safety.png";
 
-const Certificate = ({ data, fromEmployer }) => {
-  const [day, month, year] = data.issueOn.split("-");
-  const date = new Date(+year, +month - 1, +day).toDateString();
+const Certificate = ({ data, fromEmployer, date }) => {
   return (
     <div className="flex flex-col shadow-shadow6 border border-gray2 bg-white1 px-[93px] pt-[15px] pb-[25px]">
       <div className="flex items-center justify-between mb-6">
@@ -32,18 +30,25 @@ const Certificate = ({ data, fromEmployer }) => {
         </span>
       </div>
 
-      <div className="flex items-center space-x-10 mb-6">
-        <span className="font-poppins font-normal text-black opacity-70 text-[16px] leading-[24px] ">
-          Issued on:
-        </span>
-        <span className="font-poppins font-normal text-black opacity-70 text-[16px] leading-[24px] ">
-          {date}
-        </span>
-      </div>
-
-      <span className="uppercase text-[16px] leading-[24px] font-poppins font-semibold text-lightBlue">
-        VIEW THE DIGITAL CERTIFICATE
-      </span>
+      {fromEmployer ? (
+        <>
+          <div className="flex items-center space-x-10 mb-6">
+            <span className="font-poppins font-normal text-black opacity-70 text-[16px] leading-[24px] ">
+              Issued on:
+            </span>
+            <span className="font-poppins font-normal text-black opacity-70 text-[16px] leading-[24px] ">
+              {date}
+            </span>
+          </div>
+          <span className="uppercase text-[16px] leading-[24px] font-poppins font-semibold text-lightBlue">
+            VIEW THE DIGITAL CERTIFICATE
+          </span>
+        </>
+      ) : (
+        <button className="text-[20px] w-[95px] leading-[30px] text-white font-poppins font-bold bg-green1 py-[10px] px-[20px] rounded-[4px] hover:scale-105">
+          Issue
+        </button>
+      )}
     </div>
   );
 };
