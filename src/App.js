@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import EmployerRequests from "./components/Employer/EmployerRequests/EmployerRequests";
+import Header from "./components/Header/Header";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 function App() {
+  const [selected, setSelected] = useState(1);
+  const [showSidebar, setShowSidebar] = useState(true);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex w-full bg-green2 h-screen overflow-scroll">
+      <Sidebar
+        showSidebar={showSidebar}
+        setShowSidebar={setShowSidebar}
+        username="Atul"
+        selected={selected}
+        setSelected={setSelected}
+      />
+      <div className="flex flex-col w-full">
+        <Header setShowSidebar={setShowSidebar} />
+
+        {selected === 1 && <EmployerRequests />}
+      </div>
     </div>
   );
 }
