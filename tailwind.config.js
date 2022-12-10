@@ -8,11 +8,15 @@ module.exports = {
       },
       colors: {
         green1: "#22DACB",
-        green2: "#e9fbf9",
+        green2: "#E4FAF7",
         green3: "rgba(34, 218, 203, 0.15)",
         green4: "rgba(34, 218, 203, 0.25)",
         white1: "#FDFDFD",
+        gray1: "#8A97A6",
+        gray2: "#e8e8e8",
+        gray3: "#BFC5CE",
         red1: "#D72F44",
+        blue1: "#001B3C",
       },
       boxShadow: {
         shadow1: "2px 6px 10px rgba(34, 218, 203, 0.25)",

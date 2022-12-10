@@ -2,6 +2,7 @@ import { useState } from "react";
 import EmployerApplicants from "./components/Employer/EmployerApplicants/EmployerApplicants";
 import EmployerRequests from "./components/Employer/EmployerRequests/EmployerRequests";
 import Header from "./components/Header/Header";
+import Settings from "./components/Settings/Settings";
 import Sidebar from "./components/Sidebar/Sidebar";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
 
         {selected === 1 && <EmployerRequests />}
         {selected === 2 && <EmployerApplicants />}
+        {selected === 4 && <Settings />}
       </div>
     </div>
   );

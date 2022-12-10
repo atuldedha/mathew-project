@@ -1,4 +1,5 @@
 import React from "react";
+import Profile from "../../Profile/Profile";
 
 const RequestForm = ({
   data,
@@ -7,7 +8,6 @@ const RequestForm = ({
   deleteRequest,
   verifyRequest,
 }) => {
-  const [day, month, year] = data.dob.split("-");
   return (
     <div className="flex flex-col absolute top-[164px] right-[24px] bottom-[10px] bg-white1 z-10 w-[650px] border border-[rgba(0, 0, 0, 0.1)] shadow-shadow4">
       <div className="flex items-center sticky top-0 justify-between bg-white1 py-[15px] pl-[42px]">
@@ -34,67 +34,10 @@ const RequestForm = ({
             fromEmplyer ? "bg-green4" : ""
           } flex flex-col py-[25px] pl-[42px] pr-[20px]"`}
         >
-          <div className="flex items-center space-x-8 mb-6">
-            <img
-              src={data.image}
-              alt="profile"
-              className="h-[65px] w-[65px] object-contain"
-            />
-            <div className="flex flex-col space-y-2">
-              <span className="font-poppins font-semibold text-[20px] leading-[30px] tracking-[5%] text-black">
-                {data.name}
-              </span>
-              <span className="font-poppins font-normal text-black opacity-70 text-[16px] leading-[24px] tracking-[10%]">
-                {data.email}
-              </span>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 gap-8">
-            <div className="flex flex-col space-y-1">
-              <span className="font-poppins font-normal text-[16px] leading-[24px] text-black opacity-70">
-                Date of birth
-              </span>
-              <span className="font-poppins font-semibold text-[18px] leading-[27px] text-black">
-                {`${new Date(+year, +month - 1, +day).toDateString()}`}
-              </span>
-            </div>
-            <div className="flex flex-col space-y-1">
-              <span className="font-poppins font-normal text-[16px] leading-[24px] text-black opacity-70">
-                Phone number
-              </span>
-              <span className="font-poppins font-semibold text-[18px] leading-[27px] text-black">
-                {data.phoneNumber}
-              </span>
-            </div>
-            <div className="flex flex-col space-y-1">
-              <span className="font-poppins font-normal text-[16px] leading-[24px] text-black opacity-70">
-                Certificate Number
-              </span>
-              <span className="font-poppins font-semibold text-[18px] leading-[27px] text-black">
-                {data.certificationNumber}
-              </span>
-            </div>
-            <div className="flex flex-col space-y-1">
-              <span className="font-poppins font-normal text-[16px] leading-[24px] text-black opacity-70">
-                Institution ID
-              </span>
-              <span className="font-poppins font-semibold text-[18px] leading-[27px] text-black">
-                {data.institutionId}
-              </span>
-            </div>
-            <div className="flex flex-col space-y-1">
-              <span className="font-poppins font-normal text-[16px] leading-[24px] text-black opacity-70">
-                Graduation year
-              </span>
-              <span className="font-poppins font-semibold text-[18px] leading-[27px] text-black">
-                {data.graduationYear}
-              </span>
-            </div>
-          </div>
+          <Profile data={data} showDemographicData />
         </div>
 
-        <div className="flex flex-col space-y-4 mt-4 mb-10 pl-[40px]">
+        <div className="flex flex-col space-y-4 mt-4 mb-28 pl-[40px]">
           <span className="font-poppins font-semibold text-[18px] leading-[27px] text-black">
             Message
           </span>

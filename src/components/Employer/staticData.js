@@ -132,7 +132,7 @@ const data = {
       corpName: "San Francisco, USA",
       score: "100%",
       verifiedBy: "Ander Thompson",
-      verifiedPersonPosition:
+      verificationPersonPosition:
         "Assistant Director of Human Resource By Big Corp",
     },
     {
@@ -147,7 +147,7 @@ const data = {
       corpName: "San Francisco, USA",
       score: "100%",
       verifiedBy: "Ander Thompson",
-      verifiedPersonPosition:
+      verificationPersonPosition:
         "Assistant Director of Human Resource By Big Corp",
     },
     {
@@ -162,7 +162,7 @@ const data = {
       corpName: "San Francisco, USA",
       score: "100%",
       verifiedBy: "Ander Thompson",
-      verifiedPersonPosition:
+      verificationPersonPosition:
         "Assistant Director of Human Resource By Big Corp",
     },
     {
@@ -177,7 +177,7 @@ const data = {
       corpName: "San Francisco, USA",
       score: "100%",
       verifiedBy: "Ander Thompson",
-      verifiedPersonPosition:
+      verificationPersonPosition:
         "Assistant Director of Human Resource By Big Corp",
     },
     {
@@ -192,7 +192,7 @@ const data = {
       corpName: "San Francisco, USA",
       score: "100%",
       verifiedBy: "Ander Thompson",
-      verifiedPersonPosition:
+      verificationPersonPosition:
         "Assistant Director of Human Resource By Big Corp",
     },
     {
@@ -207,10 +207,14 @@ const data = {
       corpName: "San Francisco, USA",
       score: "100%",
       verifiedBy: "Ander Thompson",
-      verifiedPersonPosition:
+      verificationPersonPosition:
         "Assistant Director of Human Resource By Big Corp",
     },
   ],
+  settings: {
+    apiKey: "31d6cfe0d16ae931b73c59d7e0c08567hjdetufg9c0",
+    apiSecret: "31d6cfe0d16ae931b73c59d7e0c08567hjdetufg9c0",
+  },
 };
 
 export default data;
