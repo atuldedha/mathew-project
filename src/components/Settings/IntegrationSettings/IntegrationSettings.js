@@ -6,7 +6,7 @@ import data from "../../Employer/staticData";
 
 const IntegrationSettings = () => {
   return (
-    <div className="bg-white flex flex-col pl-[77px] pt-[67px] pb-[46px] h-full overflow-scroll">
+    <div className="bg-white flex flex-col pl-[77px] pt-[67px] pb-[46px] h-full">
       <div className="flex flex-col w-[610px]">
         <div className="flex items-center justify-between bg-white border border-gray2 p-[20px]">
           <div className="flex items-center space-x-2">

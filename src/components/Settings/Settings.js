@@ -7,7 +7,7 @@ import UserSettings from "./UserSettings/UserSettings";
 const Settings = () => {
   const [selectedTab, setSelectedTab] = useState(2);
   return (
-    <div className="mt-[90px] ml-[298px] flex flex-col bg-white1">
+    <div className="mt-[90px] ml-[298px] flex flex-col bg-white1 overflow-scroll">
       <SettingsHeader
         selectedTab={selectedTab}
         setSelectedTab={setSelectedTab}
