@@ -5,8 +5,8 @@ const EmployerApplicantForm = ({ data, closeForm }) => {
   const [day, month, year] = data.expirationDate.split("-");
   const [issueYear, issueMonth] = data.issueDate.split("-");
   return (
-    <div className="bg-white1 flex flex-col absolute top-[164px] right-[24px] w-[680px] pt-[40px] pl-[35px] pr-[40px] pb-[50px] shadow-shadow1">
-      <div className="flex w-full items-center justify-end space-x-10 pr-[25px] pl-[40px] mb-[50px]">
+    <div className="bg-white1 flex flex-col absolute top-[164px] right-[24px] w-[680px] pt-[30px] pl-[35px] pr-[40px] pb-[35px] shadow-shadow1">
+      <div className="flex w-full items-center justify-end space-x-10 pr-[25px] pl-[40px] mb-[25px]">
         <span className="font-poppins font-normal text-[16px] leading-[24px] text-black opacity-70">
           Expiration Date:{" "}
           {`${new Date(+year, +month - 1, +day).toDateString()}`}
@@ -19,7 +19,7 @@ const EmployerApplicantForm = ({ data, closeForm }) => {
         </span>
       </div>
 
-      <div className="flex items-center space-x-8 mb-20 ml-[35px]">
+      <div className="flex items-center space-x-8 mb-10 ml-[35px]">
         <img
           src={data.image}
           alt="profile"
