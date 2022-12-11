@@ -45,7 +45,7 @@ const Header = ({ setShowSidebar, username, showSidebar, selected }) => {
       </div>
       {/* when certifications tab is selected */}
       {selected === 6 ? (
-        <button className="py-[15px] px-[30px] bg-blue1 text-center text-white1 font-poppins font-bold text-[20px] leading-[30px] rounded-[4px]">
+        <button className="py-[10px] px-[22px] bg-blue1 text-white1 font-poppins font-bold text-[18px] leading-[30px] rounded-[4px]">
           Upload Certificate
         </button>
       ) : // when desgins tab is selected
