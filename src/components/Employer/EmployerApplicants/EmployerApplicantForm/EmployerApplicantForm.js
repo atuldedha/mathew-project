@@ -12,7 +12,7 @@ const EmployerApplicantForm = ({ data, closeForm }) => {
       {/* form header */}
       <div className="flex w-full items-center justify-end space-x-10 pr-[25px] pl-[40px] mb-[45px]">
         {/* smText utility class defined in index.css */}
-        <span className="smText">
+        <span className="smText font-normal">
           Expiration Date:{" "}
           {`${new Date(+year, +month - 1, +day).toDateString()}`}
         </span>

@@ -4,7 +4,7 @@ import DragZone from "./DragZone/DragZone";
 const IssuesUpload = () => {
   const [images, setImages] = useState([]);
   return (
-    <div className="flex flex-col absolute top-[164px] right-[24px] bottom-[10px] bg-white1 z-10 w-[650px] border border-gray2 shadow-shadow4 overflow-scroll">
+    <div className="flex flex-col absolute top-[164px] right-[24px] bottom-[10px] bg-white1 z-10 w-[550px] border border-gray2 shadow-shadow4 overflow-scroll">
       <DragZone images={images} setImages={setImages} />
       <div className="mt-[32px] flex flex-col px-[35px] pb-[40px]">
         <span className="font-poppins font-semibold text-[20px] leading-[30px] text-black mb-5">
