@@ -1,18 +1,20 @@
-import { Bars3Icon, UserIcon } from "@heroicons/react/24/outline";
-import React from "react";
-// import { useWindowSize } from "../../utils/WindowResizeHook";
+import React, { useState } from "react";
 import SearchIcon from "../../images/search.png";
 import ProfilePicture from "../../images/profilePicture.png";
 import Verified from "../../images/safety.png";
 import ArrowDown from "../../images/arrowDown.png";
 import ArrowUp from "../../images/arrowUp.png";
+import IssueHeaderButtons from "../Issues/IssueDesign/IssueHeaderButtons/IssueHeaderButtons";
 
-const Header = ({ setShowSidebar, username, showSidebar }) => {
-  // const [width, height] = useWindowSize();
+// Header Component
+const Header = ({ setShowSidebar, username, showSidebar, selected }) => {
+  // state for selecting the header button when designs tab is selected
+  const [buttonSelected, setButtonSelected] = useState(1);
   return (
-    <div className="flex sticky top-0 z-10 justify-between w-full bg-white1 shadow-shadow2 border-b border-b-gray-300 h-max py-[30px] px-[18px]">
+    <div className="flex sticky top-0 z-10 h-[110px] justify-between w-full bg-white1 shadow-shadow2 border-b border-b-gray-300 py-[30px] px-[18px]">
+      {/* common for all tabs */}
       <div className="flex items-center space-x-10">
-        <div className="flex items-center justify-between bg-white1 w-[270px]">
+        <div className="flex items-center justify-between bg-white1 w-[260px]">
           <div className="flex items-center space-x-4">
             <img
               src={Verified}
@@ -41,11 +43,25 @@ const Header = ({ setShowSidebar, username, showSidebar }) => {
           />
         </div>
       </div>
-      <img
-        src={ProfilePicture}
-        alt="img"
-        className="h-[50px] w-[50px] object-contain rounded-full mr-[40px]"
-      />
+      {/* when certifications tab is selected */}
+      {selected === 6 ? (
+        <button className="py-[15px] px-[30px] bg-blue1 text-center text-white1 font-poppins font-bold text-[20px] leading-[30px] rounded-[4px]">
+          Upload Certificate
+        </button>
+      ) : // when desgins tab is selected
+      selected === 7 ? (
+        <IssueHeaderButtons
+          buttonSelected={buttonSelected}
+          setButtonSelected={setButtonSelected}
+        />
+      ) : (
+        // for all other tabs
+        <img
+          src={ProfilePicture}
+          alt="img"
+          className="h-[50px] w-[50px] object-contain rounded-full mr-[40px]"
+        />
+      )}
     </div>
   );
 };

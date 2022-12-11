@@ -4,10 +4,10 @@ import EmployerRequests from "./components/Employer/EmployerRequests/EmployerReq
 import EmployerUpdates from "./components/Employer/EmployerUpdates/EmployerUpdates";
 import Header from "./components/Header/Header";
 import IssueCertifications from "./components/Issues/IssueCertifications/IssueCertifications";
+import IssueDesign from "./components/Issues/IssueDesign/IssueDesign";
 import IssueRequests from "./components/Issues/IssueRequests/IssueRequests";
 import Settings from "./components/Settings/Settings";
 import Sidebar from "./components/Sidebar/Sidebar";
-
 function App() {
   const [selected, setSelected] = useState(1);
   const [showSidebar, setShowSidebar] = useState(true);
@@ -25,14 +25,16 @@ function App() {
           setShowSidebar={setShowSidebar}
           showSidebar={showSidebar}
           username="Atul"
+          selected={selected}
         />
 
         {selected === 1 && <EmployerRequests />}
         {selected === 2 && <EmployerApplicants />}
         {selected === 3 && <EmployerUpdates />}
-        {selected === 4 && <Settings />}
+        {(selected === 4 || selected === 9) && <Settings />}
         {selected === 5 && <IssueRequests />}
         {selected === 6 && <IssueCertifications />}
+        {selected === 7 && <IssueDesign />}
       </div>
     </div>
   );

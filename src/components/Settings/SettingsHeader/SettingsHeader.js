@@ -1,5 +1,6 @@
 import React from "react";
 
+// common component for settings tab header
 const SettingsHeader = ({ selectedTab, setSelectedTab }) => {
   return (
     <div className="flex items-center space-x-10 sticky top-0 z-10 w-full bg-white border border-[rgba(0, 0, 0, 0.1)] py-[20px]">

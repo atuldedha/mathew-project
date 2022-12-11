@@ -7,13 +7,8 @@ import ArrowUp from "../../images/arrowUp.png";
 import { useWindowSize } from "../../utils/WindowResizeHook";
 import data from "./staticData";
 
-const Sidebar = ({
-  showSidebar,
-  setShowSidebar,
-  username,
-  selected,
-  setSelected,
-}) => {
+// sidebar
+const Sidebar = ({ showSidebar, setShowSidebar, selected, setSelected }) => {
   const [width, height] = useWindowSize();
 
   useEffect(() => {
@@ -24,6 +19,7 @@ const Sidebar = ({
     }
   }, [width]);
 
+  // click handler on sidebar items
   const handleClick = (id) => {
     setSelected(id);
     if (width < parseFloat(750)) {
@@ -37,13 +33,14 @@ const Sidebar = ({
         !showSidebar
           ? "opacity-0 -translate-y-[500px] h-0 p-0"
           : "opacity-100 -translate-y-[1px] h-screen"
-      } flex flex-col absolute top-[0] left-0 transition-all ease-in-out duration-500 bg-white1 w-[298px] z-10 px-[16px] overflow-scroll`}
+      } flex flex-col absolute top-[0] left-0 transition-all ease-in-out duration-500 bg-white1 w-[260px] z-10 px-[16px] overflow-scroll`}
     >
       <span className="font-poppins font-medium text-[16px] leading-[24px] text-black opacity-60 mb-4 uppercase mt-[140px] ml-8">
         Employer
       </span>
 
       <div className="flex flex-col w-full mb-10">
+        {/* sidebar options */}
         {data.employer.map((item) => (
           <SidebarOptions
             icon={item.icon}

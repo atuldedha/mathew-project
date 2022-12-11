@@ -2,3 +2,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .xsText {
+        @apply font-poppins font-normal text-[12px] leading-[18px] text-black
+    }
+    .smText {
+        @apply font-poppins font-medium text-black text-[14px] leading-[21px]
+    }
+    .smTextNormal {
+        @apply font-poppins font-normal text-[14px] leading-[21px] text-black
+    }
+    .smTextSemibold {
+       @apply font-poppins font-semibold text-[14px] leading-[20px]
+    }
+    .mdText {
+        @apply font-poppins font-normal text-[16px] leading-[24px] text-black opacity-70
+    }
+    .mdTextWithoutOpacity {
+        @apply font-semibold font-poppins text-[16px] leading-[24px]
+    }
+    .mdTextWithoutOpacityNormal {
+        @apply font-normal font-poppins text-[15px] leading-[24px]
+    }
+
+    .mdTextLargeSemibold {
+        @apply font-poppins font-semibold text-[16px] leading-[27px] text-black
+    }
+
+    .lgText {
+        @apply text-[20px] text-black font-poppins font-semibold leading-[30px]
+    }
+}

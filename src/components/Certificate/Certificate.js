@@ -1,9 +1,11 @@
 import React from "react";
 import Verified from "../../images/safety.png";
 
-const Certificate = ({ data, fromEmployer, date }) => {
+// certificate component common for both updates and certifications tab
+const Certificate = ({ data, fromEmployer, date, setOpenUploadIssues }) => {
   return (
     <div className="flex flex-col shadow-shadow6 border border-gray2 bg-white1 px-[93px] pt-[15px] pb-[25px]">
+      {/* common for both */}
       <div className="flex items-center justify-between mb-6">
         <span className="text-[20px] leading-[30px] font-bold text-black font-poppins">
           {data.certificateName}
@@ -29,7 +31,7 @@ const Certificate = ({ data, fromEmployer, date }) => {
           {data.issuedBy}
         </span>
       </div>
-
+      {/* if from employer -> updates tab */}
       {fromEmployer ? (
         <>
           <div className="flex items-center space-x-10 mb-6">
@@ -45,7 +47,12 @@ const Certificate = ({ data, fromEmployer, date }) => {
           </span>
         </>
       ) : (
-        <button className="text-[20px] w-[95px] leading-[30px] text-white font-poppins font-bold bg-green1 py-[10px] px-[20px] rounded-[4px] hover:scale-105">
+        // {/* else -> certifications tab */}
+        // button click opens the issue upload form
+        <button
+          className="text-[20px] w-[95px] leading-[30px] text-white font-poppins font-bold bg-green1 py-[10px] px-[20px] rounded-[4px] hover:scale-105"
+          onClick={() => setOpenUploadIssues(true)}
+        >
           Issue
         </button>
       )}

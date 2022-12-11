@@ -1,8 +1,10 @@
 import React from "react";
 
+// Common component for Profile
 const Profile = ({ data, showDemographicData, date }) => {
   return (
     <>
+      {/* common for all usage */}
       <div className="flex items-center space-x-8">
         <img
           src={data.image}
@@ -10,55 +12,36 @@ const Profile = ({ data, showDemographicData, date }) => {
           className="h-[65px] w-[65px] object-contain"
         />
         <div className="flex flex-col space-y-2">
-          <span className="font-poppins font-semibold text-[20px] leading-[30px] tracking-[5%] text-black">
-            {data.name}
-          </span>
-          <span className="font-poppins font-normal text-black opacity-70 text-[16px] leading-[24px] tracking-[10%]">
+          <span className="lgText tracking-[5%]">{data.name}</span>
+          <span className="mdTextWithoutOpacityNormal tracking-[10%]">
             {data.email}
           </span>
         </div>
       </div>
+      {/* if demographic data to be shown */}
       {showDemographicData ? (
         <div className="grid grid-cols-2 gap-8 mt-6">
           <div className="flex flex-col space-y-1">
-            <span className="font-poppins font-normal text-[16px] leading-[24px] text-black opacity-70">
-              Date of birth
-            </span>
-            <span className="font-poppins font-semibold text-[18px] leading-[27px] text-black">
-              {date}
-            </span>
+            <span className="mdText">Date of birth</span>
+            <span className="mdTextLargeSemibold">{date}</span>
           </div>
           <div className="flex flex-col space-y-1">
-            <span className="font-poppins font-normal text-[16px] leading-[24px] text-black opacity-70">
-              Phone number
-            </span>
-            <span className="font-poppins font-semibold text-[18px] leading-[27px] text-black">
-              {data.phoneNumber}
-            </span>
+            <span className="mdText">Phone number</span>
+            <span className="mdTextLargeSemibold">{data.phoneNumber}</span>
           </div>
           <div className="flex flex-col space-y-1">
-            <span className="font-poppins font-normal text-[16px] leading-[24px] text-black opacity-70">
-              Certificate Number
-            </span>
-            <span className="font-poppins font-semibold text-[18px] leading-[27px] text-black">
+            <span className="mdText">Certificate Number</span>
+            <span className="mdTextLargeSemibold">
               {data.certificationNumber}
             </span>
           </div>
           <div className="flex flex-col space-y-1">
-            <span className="font-poppins font-normal text-[16px] leading-[24px] text-black opacity-70">
-              Institution ID
-            </span>
-            <span className="font-poppins font-semibold text-[18px] leading-[27px] text-black">
-              {data.institutionId}
-            </span>
+            <span className="mdText">Institution ID</span>
+            <span className="mdTextLargeSemibold">{data.institutionId}</span>
           </div>
           <div className="flex flex-col space-y-1">
-            <span className="font-poppins font-normal text-[16px] leading-[24px] text-black opacity-70">
-              Graduation year
-            </span>
-            <span className="font-poppins font-semibold text-[18px] leading-[27px] text-black">
-              {data.graduationYear}
-            </span>
+            <span className="mdText">Graduation year</span>
+            <span className="mdTextLargeSemibold">{data.graduationYear}</span>
           </div>
         </div>
       ) : null}

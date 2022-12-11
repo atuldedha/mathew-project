@@ -1,3 +1,4 @@
+// static data for all tabs
 import ProfilePic from "../../images/profilePicture.png";
 import IssuerImage from "../../images/issuerImage.png";
 const data = {
