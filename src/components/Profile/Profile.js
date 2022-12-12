@@ -20,7 +20,7 @@ const Profile = ({ data, showDemographicData, date }) => {
       </div>
       {/* if demographic data to be shown */}
       {showDemographicData ? (
-        <div className="grid grid-cols-2 gap-8 mt-6">
+        <div className="grid grid-cols-2 gap-4 mt-6">
           <div className="flex flex-col space-y-1">
             <span className="mdText">Date of birth</span>
             <span className="mdTextLargeSemibold">{date}</span>

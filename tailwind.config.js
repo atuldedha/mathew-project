@@ -29,6 +29,17 @@ module.exports = {
         shadow5: "2px 4px 15px rgba(34, 218, 203, 0.5)",
         shadow6: "2px 4px 15px rgba(68, 191, 199, 0.5)",
       },
+
+      keyframes: {
+        circle: {
+          from: { border: "5px solid #FFFFFF" },
+          to: { border: "5px solid #22DACB" },
+        },
+      },
+
+      animation: {
+        fillCircle: "circle 2s linear ",
+      },
     },
   },
   plugins: [],

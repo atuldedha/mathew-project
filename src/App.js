@@ -3,6 +3,7 @@ import EmployerApplicants from "./components/Employer/EmployerApplicants/Employe
 import EmployerRequests from "./components/Employer/EmployerRequests/EmployerRequests";
 import EmployerUpdates from "./components/Employer/EmployerUpdates/EmployerUpdates";
 import Header from "./components/Header/Header";
+import IssueAnalytics from "./components/Issues/IssueAnalytics/IssueAnalytics";
 import IssueCertifications from "./components/Issues/IssueCertifications/IssueCertifications";
 import IssueDesign from "./components/Issues/IssueDesign/IssueDesign";
 import IssueRequests from "./components/Issues/IssueRequests/IssueRequests";
@@ -35,6 +36,7 @@ function App() {
         {selected === 5 && <IssueRequests />}
         {selected === 6 && <IssueCertifications />}
         {selected === 7 && <IssueDesign />}
+        {selected === 8 && <IssueAnalytics />}
       </div>
     </div>
   );
