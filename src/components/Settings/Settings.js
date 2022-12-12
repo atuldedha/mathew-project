@@ -9,7 +9,7 @@ const Settings = () => {
   // state to manage selected tab
   const [selectedTab, setSelectedTab] = useState(2);
   return (
-    <div className="mt-[90px] ml-[260px] flex flex-col bg-white1 overflow-scroll">
+    <div className="mt-[90px] ml-[260px] flex flex-col bg-white1 overflow-scroll h-full">
       {/* header */}
       <SettingsHeader
         selectedTab={selectedTab}

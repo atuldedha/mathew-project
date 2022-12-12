@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import IssueAnalyticsHeader from "./IssueAnalyticsHeader/IssueAnalyticsHeader";
-import { AdjustmentsHorizontalIcon } from "@heroicons/react/24/outline";
-import AnalyticsCard from "./AnalyticsCard/AnalyticsCard";
 import SubmissionAnalytics from "./SubmissionAnalytics/SubmissionAnalytics";
 
 const IssueAnalytics = () => {
